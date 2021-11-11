@@ -36,3 +36,14 @@ function getSymbol() {
         alert(`9-(`);
     } else alert(`Enter a single digit`);
 };
+
+function getIdentialNumbers() {
+    let getNumber = +prompt("What is three-digit number do you want to verify?");
+    let a = (Math.trunc(getNumber / 100));
+    let b = (Math.trunc((getNumber - a * 100) / 10));
+    let c = (getNumber - a * 100 - b * 10);
+    if (a == b || a == c || b == c) {
+        alert(`There are the same numbers in this number`);
+    } else alert(`There are no identical numbers`);
+};
+
