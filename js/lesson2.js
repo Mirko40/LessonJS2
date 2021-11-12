@@ -47,3 +47,14 @@ function getIdentialNumbers() {
     } else alert(`There are no identical numbers`);
 };
 
+function getIdentialNumbers2() {
+    let getNumber = +prompt("What is three-digit number do you want to verify?");
+    let str = String(getNumber)
+    let a = str[0];
+    let b = str[1];
+    let c = str[2];
+    if (a == b || a == c || b == c) {
+        alert(`There are the same numbers in this number`);
+    } else alert(`There are no identical numbers`);
+};
+
