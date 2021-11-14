@@ -110,3 +110,14 @@ function getAmount() {
         alert(`You have to pay ${howDollars * 0.93} USD`);
     } else alert(`Enter the correct purchase amount`);
 };
+
+function getCircle() {
+    let lenghtCircle = +prompt("What is the length of the circle?");
+    let perimeterSquare = +prompt("What is the perimeter of the square?");
+    let diameterCircle = lenghtCircle / (Math.PI)
+    let sideSquare = perimeterSquare / 4
+    if (diameterCircle <= sideSquare) {
+        alert(`The circle is placed in a square`);
+    } else alert(`The circle is not placed in a square`);
+};
+
