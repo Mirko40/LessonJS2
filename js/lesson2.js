@@ -97,3 +97,16 @@ function exchDollar() {
         alert(`You have ${cursAZN * howDollars} AZN`);
     } else alert(`Enter the correct currency for the exchange`);
 };
+
+function getAmount() {
+    let howDollars = +prompt("What is the amount of your purchase?");
+    if (howDollars < 200 && howDollars > 0) {
+        alert(`You have to pay ${howDollars} USD`);
+    } else if (howDollars >= 200 && howDollars < 300) {
+        alert(`You have to pay ${howDollars * 0.97} USD`);
+    } else if (howDollars >= 300 && howDollars < 500) {
+        alert(`You have to pay ${howDollars * 0.95} USD`);
+    } else if (howDollars >= 500) {
+        alert(`You have to pay ${howDollars * 0.93} USD`);
+    } else alert(`Enter the correct purchase amount`);
+};
