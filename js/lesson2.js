@@ -121,3 +121,26 @@ function getCircle() {
     } else alert(`The circle is not placed in a square`);
 };
 
+function getResaultTest() {
+    let capitalUkr = prompt("What is the capital of Ukraine (Kyiv, Lviv, Ivano-Frankivsk)?");
+    let capitalGB = prompt("What a capital of Great Britain  (Kyiv, London, Liverpool)?");
+    let capitalNL = prompt("What is the capital of the Netherlands  (Paris, London, Amsterdam)?");
+    let strUkr = String(capitalUkr);
+    let strGB = String(capitalGB);
+    let strNL = String(capitalNL);
+
+    if (strUkr === "Kyiv") {
+        var scores = 2;
+    } else scores = 0;
+
+    if (strGB === "London") {
+        scores = scores + 2;
+    } else scores = scores + 0;
+
+    if (strNL === "Amsterdam") {
+        scores = scores + 2;
+    } else scores = scores + 0;
+
+    alert(`Your scores is ${scores}`)
+
+};
