@@ -70,12 +70,12 @@ function getLeapYear() {
 function getNumberCheck() {
     let getNumber = +prompt("Enter a five-digit number to check?");
     let str = String(getNumber);
-    let strLenght = str.length;
+    let strLength = str.length;
     let a = str[0];
     let b = str[1];
     let d = str[3];
     let e = str[4];
-    if (strLenght != 5) {
+    if (strLength != 5) {
         alert(`This is an incorrect number`);
     } else if (a === e && b === d) {
         alert(`This number is a palyndrome`);
@@ -112,32 +112,30 @@ function getAmount() {
 };
 
 function getCircle() {
-    let lenghtCircle = +prompt("What is the length of the circle?");
+    let lengthCircle = +prompt("What is the length of the circle?");
     let perimeterSquare = +prompt("What is the perimeter of the square?");
-    let diameterCircle = lenghtCircle / (Math.PI)
+    let diameterCircle = lengthCircle / (Math.PI)
     let sideSquare = perimeterSquare / 4
     if (diameterCircle <= sideSquare) {
         alert(`The circle is placed in a square`);
     } else alert(`The circle is not placed in a square`);
 };
 
-function getResaultTest() {
+function getResultTest() {
     let capitalUkr = prompt("What is the capital of Ukraine (Kyiv, Lviv, Ivano-Frankivsk)?");
     let capitalGB = prompt("What a capital of Great Britain  (Kyiv, London, Liverpool)?");
     let capitalNL = prompt("What is the capital of the Netherlands  (Paris, London, Amsterdam)?");
-    let strUkr = String(capitalUkr);
-    let strGB = String(capitalGB);
-    let strNL = String(capitalNL);
+    let scores = 0;
 
-    if (strUkr === "Kyiv") {
-        var scores = 2;
+    if (capitalUkr === "Kyiv") {
+        scores = 2;
     } else scores = 0;
 
-    if (strGB === "London") {
+    if (capitalGB === "London") {
         scores = scores + 2;
     } else scores = scores + 0;
 
-    if (strNL === "Amsterdam") {
+    if (capitalNL === "Amsterdam") {
         scores = scores + 2;
     } else scores = scores + 0;
 
