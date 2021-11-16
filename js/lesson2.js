@@ -142,3 +142,33 @@ function getResultTest() {
     alert(`Your scores is ${scores}`)
 
 };
+
+function showNextData() {
+    let getDay = +prompt("Enter the day of month");
+    let getMonth = +prompt("Enter the month of the year from 1 to 12");
+    let getYear = +prompt("Enter the year");
+
+    if (getDay <= 0 || getDay > 31) {
+        alert(`Enter the correct date`);
+
+    } else if (getMonth <= 0 || getMonth > 12) {
+        alert(`Enter the correct month`);
+
+    } else if (getMonth === 2 && getDay === 28 && (getYear % 400 === 0 || getYear % 4 === 0 && getYear % 100 != 0)) {
+        alert(`${getDay + 1}/${getMonth}/${getYear}`);
+
+    } else if (getDay === 31 && (getMonth === 4 || getMonth === 6 || getMonth === 9 || getMonth === 11) || (getDay === 29 || getDay === 30 || getDay === 31) && getMonth === 2) {
+        alert(`Enter the correct date of month`);
+
+    } else if (getDay === 30 && (getMonth === 4 || getMonth === 6 || getMonth === 9 || getMonth === 11) || getDay === 28 && getMonth === 2) {
+        alert(`1/${getMonth + 1}/${getYear}`);
+
+    } else if (getDay === 31 && getMonth === 12) {
+        alert(`1/1/${getYear + 1}`);
+
+    } else if (getDay === 31 && (getMonth === 1 || getMonth === 3 || getMonth === 5 || getMonth === 7 || getMonth === 8 || getMonth === 10)) {
+        alert(`1/${getMonth + 1}/${getYear}`);
+
+    } else alert(`${getDay + 1}/${getMonth}/${getYear}`);
+
+};
